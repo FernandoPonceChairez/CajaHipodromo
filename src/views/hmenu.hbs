@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    {{>header}}
+    <!--Inicio-->
+    <section>
+        <div class="bg-cover" style="background-image: url('/images/Ahorro.png');  height: 1000px;">
+            <div class="flex">
+                <div class="text-white pt-80 pl-56">
+                    <h1 class="font-Roboto text-6xl">Porque tu ahorro nos <br>importa.</h1>
+                    <button type="button" class="bg-CH text-white font-bold py-2 px-4 rounded mt-24">
+                        Cónocenos
+                    </button>
+                </div>
+                <div class="pt-48 pl-100px">
+                    <img class="rounded-lg" src="/images/logo.jpeg" alt="Logo">
+                </div>
+            </div>
+            <!-- <div class="text-white pt-80 items-center pl-400px font-Roboto">
+                <p>1,000,000 de cuentas de ahorro 15sucursales </p>
+            </div>-->
+        </div>
+    </section>
+
+    <!--BOLETÍN-->
+    <section class="h-37rem font-Roboto">
+        <div class="flex justify-between">
+            <div>
+                <div class="flex items-center w-56 ml-11 mt-28">
+                    <hr class="  flex-1 border-t-2 border-black mr-4">
+                    <p class="font-bold">BOLETÍN</p>
+                </div>
+                <div class="pl-12rem mt-5">
+                    <h1 class="text-7xl">Enterate de nuestras <br>promociones</h1>
+                    <p class="w-690px mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe delectus
+                        <br>a deserunt labore aperiam ab! Pariatur blanditiis eaque officia, ipsam nulla exercitationem
+                        iusto cupiditate corporis tempore ipsa? Delectus, <br> perferendis blanditiis!
+                    </p>
+                    <button class="bg-CH hover:bg-red-700 text-white font-bold py-2 px-4 rounded mt-4">
+                        Button
+                    </button>
+                </div>
+            </div>
+            <div>
+                <div class="mt-28 pr-56">
+                    <img class="rounded-lg" src="/images/niña.png" alt="main">
+                </div>
+            </div>
+    </section>
+
+    <!--SERVICIOS-->
+    <section class="h-auto font-Roboto bg-CH text-white">
+        <div class="flex justify-between">
+            <div>
+                <div class="flex items-center w-56 ml-11 mt-28">
+                    <hr class="  flex-1 border-t-2 border-white mr-4">
+                    <p class="font-bold">SERVICIOS</p>
+                </div>
+                <div class="pl-12rem mt-5">
+                    <h1 class="text-7xl">Enterate de los servicios <br>que la Caja Hipodrómo <br>tiene</h1>
+                    <p class="w-690px mt-5">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                    <div class="container ml-5">
+                        <ul class="list-none ">
+                            <li class="flex items-center mb-2"> <img class="bg-white rounded-sm w-6 h-6"
+                                    src="/images/icons/ATM.svg" alt="a">
+                                <p class="flex-grow ml-3">Cajeros Automaticos <br></p>
+                            </li>
+                            <P class="ml-9 mb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</P>
+
+                            <li class="flex items-center mb-2"> <img class="bg-white rounded-sm w-6 h-6"
+                                    src="/images/icons/Pay.svg" alt="a">
+                                <p class="flex-grow ml-3">Pago de servicios <br></p>
+                            </li>
+                            <P class="ml-9 mb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</P>
+
+                            <li class="flex items-center mb-2"> <img class="bg-white rounded-sm w-6 h-6"
+                                    src="/images/icons/Piggy.svg" alt="a">
+                                <p class="flex-grow ml-3">Caja de ahorro <br></p>
+                            </li>
+                            <P class="ml-9 mb-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</P>
+
+                            <li class="flex items-center mb-2"> <img class="bg-white rounded-sm w-6 h-6"
+                                    src="/images/icons/Vector.svg" alt="a">
+                                <p class="flex-grow ml-3">Centro recreativos <br></p>
+                            </li>
+                            <P class="ml-9 mb-28">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</P>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class=" mt-40 pr-56">
+                    <img class="rounded-lg w" style="width: 440px;" src="/images/SERVICIOS.png" alt="main">
+                </div>
+            </div>
+    </section>
+
+    <!--LastOne-->
+    <section class="h-37rem font-Roboto">
+        <div>
+            <div>
+                <div class="flex items-center w-56 ml-11 mt-28 mb-5">
+                    <hr class="  flex-1 border-t-2 border-black mr-4">
+                    <p class="font-bold">Educación Financiera</p>
+                </div>
+            </div>
+        </div>
+        <div class="mb-5">
+            <h1 class="text-7xl flex justify-center">La educación financiera no solo te ayuda a <br> administrar tu
+                dinero, sino que te da el poder <br> de controlar tu futuro financiero.</h1>
+        </div>
+
+        <div class="flex justify-around">
+            <div class="block max-w-sm rounded-lg bg-white bg-cover p-6 shadow-lg dark:bg-neutral-700"
+                style="background-image: url('/images/pfinan.jpg');">
+                <h5
+                    class="mb-2 text-xl font-medium leading-tight text-neutral-800 text-white dark:text-neutral-50 text-center">
+                    Planificación Financiera
+                </h5>
+                <p class="mb-4 text-base text-neutral-600 text-white  dark:text-neutral-200">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+                <div class="flex justify-center">
+                    <button type="button"
+                        class="rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                        data-te-ripple-init>
+                        Ver Más
+                    </button>
+                </div>
+            </div>
+
+            <div class="block max-w-sm rounded-lg bg-white bg-cover p-6 shadow-lg dark:bg-neutral-700"
+                style="background-image: url('/images/ConsejosF.png');">
+                <h5
+                    class="mb-2 text-xl font-medium leading-tight text-neutral-800 text-white dark:text-neutral-50 text-center">
+                    Consejos para metas <br> financieras
+                </h5>
+                <p class="mb-4 text-base text-neutral-600 text-white  dark:text-neutral-200">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+                <div class="flex justify-center">
+                    <button type="button"
+                        class="rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                        data-te-ripple-init>
+                        Ver Más
+                    </button>
+                </div>
+            </div>
+
+            <div class="block max-w-sm rounded-lg bg-white bg-cover p-6 shadow-lg dark:bg-neutral-700"
+                style="background-image: url('/images/ImportanciaA.jpg');">
+                <h5
+                    class="mb-2 text-xl font-medium leading-tight text-neutral-800 text-white dark:text-neutral-50 text-center">
+                    La importancia del <br> ahorro
+                </h5>
+                <p class="mb-4 text-base text-neutral-600 text-white  dark:text-neutral-200">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                </p>
+                <div class="flex justify-center">
+                    <button type="button"
+                        class="rounded border-2 border-neutral-50 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-neutral-100 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-100 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-100 dark:hover:bg-opacity-10"
+                        data-te-ripple-init>
+                        Ver Más
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+    {{>footer}}
+
+
+</body>
+
+</html>

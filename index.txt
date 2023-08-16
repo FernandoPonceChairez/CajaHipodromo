@@ -1,0 +1,44 @@
+const express  = require('express');
+const path = require('path');
+const mime = require('mime');
+const tailwindcss = require('tailwindcss');
+const postcss = require('postcss');
+const hbs = require('hbs');
+
+const app  = express();
+
+
+//Tailwind
+const tailwindConfig = require('./tailwind.config.js');
+const compiledStyles = postcss([tailwindcss(tailwindConfig)]).process('@tailwind base; @tailwind components; @tailwind utilities;').css;
+app.use(express.static(__dirname + '/public'));
+
+
+hbs.registerPartials(__dirname + '/views/partials');
+
+
+//Cargar la hoja de estilos en formato text/css
+app.get('/public/styles/styles.css', (req, res) => {
+  res.type('text/css');
+  res.sendFile(__dirname + '/public/styles/styles.css');
+});
+
+
+//Utilizar hbs como engine
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
+
+
+app.get('/', (req,res) =>{
+    res.render('index');
+
+});
+
+app.get('/creditos', (req,res) =>{
+  res.render('creditos');
+
+});
+app.listen (3000, ()=>{
+    console.log('The app is functioniojnsf')
+
+})
