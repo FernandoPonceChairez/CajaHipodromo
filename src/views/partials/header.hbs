@@ -38,29 +38,29 @@
         <!-- <button class="bg-white text-black font-bold py-2 px-4 rounded mt-4">Inicia sesión</button> -->
         {{#if role1 }}
         <div class="space-x-5 mt-4">
-          <p class="font-semibold">{{name}}</p>
-          <a class="nav-link font-semibold bg-white text-red-700 hover:bg-white py-3 px-4 rounded-md">Admin</a>
+          
+          <a class="bg-white text-black font-bold py-2 px-4 rounded">Admin</a>
+          <a href="/tabla" class="bg-white text-black font-bold py-2 px-4 rounded">PROFILES</a>
+          <a href="/tablaC" class="bg-white text-black font-bold py-2 px-4 rounded">CREDITOS</a>
           <a href="/logout"
-            class="nav-link font-semibold bg-red-500 text-white hover:bg-red-700 py-3 px-4 rounded-md">Logout</a>
+            class="bg-white text-black font-bold py-2 px-4 rounded">Logout</a>
         </div>
         {{else}}
         {{#if role2 }}
         <div class="space-x-5 mt-4">
-          <p class="font-semibold">{{name}}</p>
           <a href="/credito"
-            class="nav-link font-semibold bg-white text-red-700 hover:bg-white py-3 px-4 rounded-md">Credito</a>
+            class="bg-white text-black font-bold py-2 px-4 rounded">Credito</a>
           <a href="/logout"
-            class="nav-link font-semibold bg-red-500 text-white hover:bg-red-700 py-3 px-4 rounded-md">Logout</a>
+            class="bg-white text-black font-bold py-2 px-4 rounded">Logout</a>
         </div>
         {{else}}
         {{#if role3 }}
         <div class="space-x-5 mt-4">
-          <p class="font-semibold">{{name}}</p>
 
-          <a class="nav-link font-semibold bg-white text-red-700 hover:bg-white py-3 px-4 rounded-md">Support</a>
+          <a class="bg-white text-black font-bold py-2 px-4 rounded">Support</a>
 
           <a href="/logout"
-            class="nav-link font-semibold bg-red-500 text-white hover:bg-red-700 py-3 px-4 rounded-md">Logout</a>
+            class="bg-white text-black font-bold py-2 px-4 rounded">Logout</a>
         </div>
         {{else}}
         <div class="space-x-5">

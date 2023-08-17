@@ -1,0 +1,44 @@
+src/views/login/tabla.hbs <link rel="stylesheet" href="./styles/styles.css">
+
+ {{>header}}
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+  <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg mt-12">
+
+    <table class="table-fixed" style="  width: -webkit-fill-available;">
+      <thead>
+        <tr class="bg-red-500 text-white">
+          <th class=" py-4 ...">ID</th>
+          <th class=" py-4 ...">EMAIL</th>
+          <th class=" py-4 ...">LoanDuration</th>
+          <th class=" py-4 ...">MonthlyInstallment</th>
+          <th class=" py-4 ...">loanAmount</th>
+          <th class=" py-4 ...">interestRate</th>
+          <th class=" py-4 ...">TotalInterest</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each tasks}}
+        <tr>
+         <td class="py-3">{{id}}</td>
+          <td class="p-3">{{email}}</td>
+          <td class="p-3">{{loanDuration}}</td>
+          <td class="py-3">{{monthlyInstallment}}</td>
+          <td class="p-3">{{loanAmount}}</td>
+          <td class="p-3">{{interestRate}}</td>
+          <td class="py-3">{{totalInterest}}</td>
+          <td class="p-3 flex">
+            <form action="/delete" method="POST" class="mx-2">
+              <input type="hidden" value="{{id}}" name="id">
+              <button class="bg-red-500 text-white px-3 py-1 rounded-sm" type="submit">
+                <i class="fas fa-trash"></i></button>
+            </form>
+            <a href="/edit/{{id}}" class="bg-red-500 text-white px-3 py-1 rounded-sm">
+              <i class="fas fa-pen"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
+{{>footer}}

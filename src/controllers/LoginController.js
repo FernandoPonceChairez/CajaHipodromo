@@ -254,6 +254,90 @@ function solicitar(req, res) {
     });
 }
 
+function tabla(req, res) {
+    req.getConnection((err, conn) => {
+      conn.query('SELECT * FROM users', (err, tasks) => {
+        if(err) {
+          res.json(err);
+        }
+        res.render('login/tabla', { tasks });
+      });
+    });
+  }
+
+  function tablaC(req, res) {
+    req.getConnection((err, conn) => {
+      conn.query('SELECT * FROM creditos', (err, tasks) => {
+        if(err) {
+          res.json(err);
+        }
+        console.log(tasks);
+        res.render('login/tablaC', { tasks });
+      });
+    });
+  }
+  
+  
+
+  function store(req, res) {
+    const data = req.body;
+  
+    req.getConnection((err, conn) => {
+      conn.query('INSERT INTO users SET ?', [data], (err, rows) => {
+        res.redirect('/login');
+      });
+    });
+  }
+  
+  function destroy(req, res) {
+    const id = req.body.id;
+  
+    req.getConnection((err, conn) => {
+      conn.query('DELETE FROM users WHERE id = ?', [id], (err, rows) => {
+        res.redirect('/login');
+      });
+    })
+  }
+  
+  function edit(req, res) {
+    const id = req.params.id;
+  
+    req.getConnection((err, conn) => {
+      conn.query('SELECT * FROM users WHERE id = ?', [id], (err, tasks) => {
+        if(err) {
+          res.json(err);
+        }
+        res.render('login/edit', { tasks });
+      });
+    });
+  }
+  
+  
+  function update(req, res) {
+    const id = req.params.id;
+    const data = req.body;
+  
+    req.getConnection((err, conn) => {
+      if (err) {
+        console.error('Database connection error:', err);
+        res.status(500).json({ message: 'Database connection error' });
+        return;
+      }
+     
+      conn.query('UPDATE users SET ? WHERE id = ?', [data, id], (err, rows) => {
+        if (err) {
+          console.error('Update error:', err);
+          res.status(500).json({ message: 'Update error' });
+          return;
+        }
+        
+        console.log('Update successful:', rows);
+        res.redirect('/login');
+      });
+    });
+  }
+  
+  
 
 
 module.exports = {
@@ -265,4 +349,10 @@ module.exports = {
     credito,
     loanEstimate,
     solicitar,
+    update,
+    tabla,
+    edit,
+    destroy,
+    store,
+    tablaC,
 }

@@ -23,4 +23,14 @@ router.post('/loan-estimate', LoginController.loanEstimate);
 router.post('/solicitar', LoginController.solicitar);
 router.get('/solicitar', LoginController.solicitar);
 
+router.get('/tabla', LoginController.tabla);
+
+router.get('/tablaC', LoginController.tablaC);
+
+router.post('/delete', LoginController.destroy);
+router.get('/edit/:id', LoginController.edit);
+router.post('/edit/:id', LoginController.update);
+
+router.post('/create', LoginController.store);
+
 module.exports = router;
